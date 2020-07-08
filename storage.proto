@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+service Storage {
+	rpc Gossip (Entry) returns (Entry);
+}
+
+message Entry {
+	string pow = 1;
+	int32 block = 2;
+	int32 key = 3;
+	int32 value = 4;
+}
